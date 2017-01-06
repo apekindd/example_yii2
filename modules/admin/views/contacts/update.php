@@ -1,0 +1,21 @@
+<?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model app\modules\admin\models\Contacts */
+\Yii::$app->language = 'ru-RU';
+$this->title = 'Контакт №' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Контакты', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => "Контакт №".$model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Редактировать';
+?>
+<div class="contacts-update">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
+</div>
